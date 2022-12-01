@@ -357,6 +357,7 @@
 "Assets/Challenge 3/Scripts/RepeatBackgroundX.cs"
 "Assets/Challenge 3/Scripts/SpawnManagerX.cs"
 "Assets/Challenge 3/_Source_Files/SpinObjectsX.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MoveLeft.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/RepeatBackground.cs"

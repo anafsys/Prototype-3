@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
+    public GameObject[] obstaclePrefabs;
     private Vector3 spawnPos = new Vector3(25, 0, 0);
+    private PlayerController playerControllerScript;
     private float startDelay = 2;
     private float repeatRate = 2;
-    private PlayerController playerControllerScript;
+    private int randomObstacle;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,9 @@ public class SpawnManager : MonoBehaviour
     {
         if (playerControllerScript.gameOver == false)
         {
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            // Randomly generate animal index and spawn position
+            randomObstacle = Random.Range(0, obstaclePrefabs.Length);
+            Instantiate(obstaclePrefabs[randomObstacle], spawnPos, obstaclePrefabs[randomObstacle].transform.rotation);
         }
     }
 }
